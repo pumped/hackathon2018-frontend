@@ -1,0 +1,244 @@
+nav {
+  background-color:#a53c96 !important;
+}
+
+.container {
+  margin-top:60px;
+}
+
+.container h1 {
+  padding:1rem 0;
+}
+
+.container h2 {
+  padding:1rem 0;
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.subject_item {
+    border-radius: 2px;
+    background-color: #fff;
+    padding: 10px 20px;
+    margin: 12px 0;
+}
+
+.subject_item:first-child {
+    margin-top: 80px;
+}
+
+label {
+  font-weight:bold;
+}
+
+.question_resonse button, button.submit_answer {
+  border: 1px solid grey;
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  margin:5px 0;
+  background-color: #fff;
+}
+
+.question_resonse button:focus {
+  background-color:#eee;
+}
+
+button.submit_answer {
+    background-color: #a53c96;
+    color: #fff;
+    border: 0;
+}
+
+.question_response {
+  border:1px solid red;
+}
+
+.question_text {
+  min-height:100px;
+  padding:30px 0;
+  min-height: 250px;
+  font-size:1.3rem;
+}
+
+.rate_question {
+  text-align:right;
+  font-size:12px;
+  padding-top:20px;
+}
+
+.form_response_type input {
+  margin:0 0 0 10px;
+}
+
+.builder_component {
+  margin-top:10px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #a53c96 !important;
+    border-color: #a53c96 !important;
+    padding:6px 30px !important;
+    float:right;
+}
+
+.btn-secondary {
+  background-color:#aaa !important;
+  border-color:#aaa !important;
+}
+
+select.subjects {
+  border: 1px solid #d8dde3;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.btn-quick-quizz {
+  width:100%;
+  padding: 20px 0 !important;
+  font-size: 1.5rem;
+}
+
+.second_row {
+  margin-top:20px;
+}
+
+.btn-custom, .btn-addq {
+  width:100%;
+}
+
+.start_buttons {
+  margin-top:20px;
+}
+
+
+
+
+
+.wrapper{
+  /*width: 160px;*/
+  margin: 0 auto;
+}
+
+.wrapper h1{
+  padding-top: 3px;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+.wrapper h2{
+  text-align: left;
+}
+
+.meter {
+			/*height: 20px;  /* Can be anything */
+			position: relative;
+			margin: 2px 0 20px 0; /* Just for demo spacing */
+			background: #e0e0e0;
+			padding: 2px;
+		}
+		.meter > span {
+			display: block;
+			height: 10px;
+
+			background-color: #a53c96;
+
+
+			position: relative;
+			overflow: hidden;
+      animation: progressBar 3s ease-in-out;
+      animation-fill-mode:both;
+      transition: 0.4s linear;
+      transition-property: width;
+		}
+/*		.meter > span:after, .animate > span > span {
+			content: "";
+			position: absolute;
+			top: 0; left: 0; bottom: 0; right: 0;
+			z-index: 1;
+			overflow: hidden;
+		}
+
+		.animate > span:after {
+			display: none;
+		}
+
+		.nostripes > span > span, .nostripes > span:after {
+			-webkit-animation: none;
+			-moz-animation: none;
+			background-image: none;
+		}
+
+
+@keyframes progressBar {
+  0% { width: 0; }
+  100% { width: 100%; }
+}*/
+
+
+.line{
+  min-width: 160px;
+  margin: 0 auto 10px;
+  font-size: 10px;
+  color: white;
+  padding: 0 0 0 5px;
+  position: relative;
+  background-color: #500c8d;
+}
+
+.line:before{
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 25px;
+  top: 0;
+  z-index: -2;
+  background-color: #500c8d;
+}
+
+line.after{
+  content: '';
+  background-color: #9810f1;
+  height: 20px;
+  transition: 0.8s;
+  display: block;
+  width: 100%;
+  animation: animate 1 4s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.line1:after{
+  max-width: 80%;
+}
+
+.line2:after{
+  max-width: 60%;
+}
+
+.line3:after{
+  max-width: 40%;
+}
+
+.line4:after{
+  max-width: 90%;
+}
+
+.line5:after{
+  max-width: 50%;
+}
+
+@keyframes animate {
+  0%{
+    width: 0;
+  }
+  100%{
+    max-width: 100%;
+  }
+
+}

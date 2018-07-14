@@ -4,117 +4,117 @@ export function questionData() {
     return [
         {
             id: 'question1', // TODO: type (default multi choice)
-            text: 'What colour is the sky?',
+            text: 'Once a mass of magma is created, the magma\'s composition cannot be changed?',
             responseOptions: [
                 {
-                    text: 'Red',
-                    value: 'red'
+                    text: 'True',
+                    value: 'True'
                 },
                 {
-                    text: 'Blue',
-                    value: 'blue'
+                    text: 'False',
+                    value: 'False'
                 },
                 {
-                    text: 'Green',
+                    text: 'Banana',
                     value: 'green'
                 }
             ],
-            correctResponse: 'blue'
+            correctResponse: 'False'
         },
         {
             id: 'question2', // TODO: type (default multi choice)
-            text: 'What colour is the sky? 1',
+            text: 'Extrusive igneous rocks are also called ___, while intrusive rocks are also called ___.',
             responseOptions: [
                 {
-                    text: 'Red',
+                    text: 'Plutonic, volcanic',
                     value: 'red'
                 },
                 {
-                    text: 'Blue',
-                    value: 'blue'
+                    text: 'Volcanic, plutonic',
+                    value: 'Volcanic, plutonic'
                 },
                 {
-                    text: 'Green',
+                    text: 'Plutonic, granite',
                     value: 'green'
                 }
             ],
-            correctResponse: 'blue'
+            correctResponse: 'Volcanic, plutonic'
         },
         {
             id: 'question3', // TODO: type (default multi choice)
-            text: 'What colour is the sky? 2',
+            text: 'What is a fundamental difference in chemical compostion between the igneous rocks granite and basalt?',
             responseOptions: [
                 {
-                    text: 'Red',
-                    value: 'red'
+                    text: 'No difference',
+                    value: 'No difference'
                 },
                 {
-                    text: 'Blue',
-                    value: 'blue'
+                    text: 'One contains silicon and one contains none',
+                    value: 'One contains silicon and one contains none'
                 },
                 {
-                    text: 'Green',
-                    value: 'green'
+                    text: 'One contains ferromagnesian minerals and one has almost none',
+                    value: 'One contains ferromagnesian minerals and one has almost none'
                 }
             ],
-            correctResponse: 'blue'
+            correctResponse: 'One contains ferromagnesian minerals and one has almost none'
         },
         {
             id: 'question4', // TODO: type (default multi choice)
-            text: 'What colour is the sky? 3',
+            text: 'Which of these is a common felsic igneous rock?',
             responseOptions: [
                 {
-                    text: 'Red',
-                    value: 'red'
+                    text: 'Quartz',
+                    value: 'Quartz'
                 },
                 {
-                    text: 'Blue',
-                    value: 'blue'
+                    text: 'Travertine',
+                    value: 'Travertine'
                 },
                 {
-                    text: 'Green',
-                    value: 'green'
+                    text: 'Granite',
+                    value: 'Granite'
                 }
             ],
-            correctResponse: 'blue'
+            correctResponse: 'Granite'
         },
         {
             id: 'question5', // TODO: type (default multi choice)
-            text: 'What colour is the sky? 4',
+            text: 'Most magma generated on earth',
             responseOptions: [
                 {
-                    text: 'Red',
-                    value: 'red'
+                    text: 'Stays below the surface and forms intrusions',
+                    value: 'Stays below the surface and forms intrusions'
                 },
                 {
-                    text: 'Blue',
-                    value: 'blue'
+                    text: 'Sings to the core-mantle boundary because of it\'s magnetism',
+                    value: 'Sings to the core-mantle boundary because of it\'s magnetism'
                 },
                 {
-                    text: 'Green',
-                    value: 'green'
+                    text: 'Erupts at the surface and forms volcanic rocks',
+                    value: 'Erupts at the surface and forms volcanic rocks'
                 }
             ],
-            correctResponse: 'blue'
+            correctResponse: 'Stays below the surface and forms intrusions'
         },
         {
             id: 'question6', // TODO: type (default multi choice)
-            text: 'What colour is the sky? 5',
+            text: 'Which is the dominant rock type being erupted as lava flows at the crests of Earth\'s oceanic ridge systems, such as in the Atlantic Ocean east of North Carolina.',
             responseOptions: [
                 {
-                    text: 'Red',
-                    value: 'red'
+                    text: 'Granite',
+                    value: 'Granite'
                 },
                 {
-                    text: 'Blue',
-                    value: 'blue'
+                    text: 'Pegmatite',
+                    value: 'Pegmatite'
                 },
                 {
-                    text: 'Green',
-                    value: 'green'
+                    text: 'Basalt',
+                    value: 'Basalt'
                 }
             ],
-            correctResponse: 'blue'
+            correctResponse: 'Basalt'
         }
     ];
 }
