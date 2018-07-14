@@ -42,15 +42,36 @@ export default class Question extends React.Component {
         this.props.triggerNext(false, true);
     }
 
+    componentDidUpdate() {
+      let elem = document.getElementById('animation');
+      console.log("attempted update")
+      if (elem) {
+        console.log("found")
+        lottie.loadAnimation({
+          container: elem, // the dom element that will contain the animation
+          renderer: 'svg',
+          loop: false,
+          autoplay: true,
+          path: 'js/correct.json' // the path to the animation json
+        });
+      }
+    }
+
     render() {
         if (this.state.submitted) {
-            const correct = this.isCorrect() ? 'correct!' : 'incorrect';
+            const correct = this.isCorrect() ? 'Correct' : 'Incorrect';
+
+            var answer = (<span class="question_answer answer_correct">{this.props.question.selectedResponseValue}</span>)
+            if (correct == "Incorrect") {
+              answer = (<span class="question_answer answer_incorrect">{this.props.question.selectedResponseValue}</span>)
+            }
 
             return (
                 <div>
-                    <hi>{this.props.question.text}</hi>
+                    <div class="question_text">{this.props.question.text} </div>
                     {/* TODO: media*/}
-                    <p>You got the question: {correct}</p>
+                    <p class="answerResult">{correct}!</p>
+                    <div id="animation"></div>
                     <SubmitButton checkSubmission={this.triggerNext.bind(this)}/>
                 </div>
             )
