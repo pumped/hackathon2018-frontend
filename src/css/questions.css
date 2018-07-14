@@ -1,9 +1,23 @@
 nav {
-  background-color:#510b8e !important;
+  background-color:#a53c96 !important;
 }
 
 .container {
   margin-top:60px;
+}
+
+.container h1 {
+  padding:1rem 0;
+}
+
+.container h2 {
+  padding:1rem 0;
+  font-size: 1.5rem;
+  color: #666;
+}
+
+label {
+  font-weight:bold;
 }
 
 .question_resonse button {
@@ -39,7 +53,37 @@ nav {
 
 .btn-primary {
     color: #fff;
-    background-color: #510c8d !important;
-    border-color: #510c8d !important;
+    background-color: #a53c96 !important;
+    border-color: #a53c96 !important;
     padding:6px 30px !important;
+    float:right;
+}
+
+.btn-secondary {
+  background-color:#aaa !important;
+  border-color:#aaa !important;
+}
+
+select.subjects {
+  border: 1px solid #d8dde3;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.btn-quick-quizz {
+  width:100%;
+  padding: 20px 0 !important;
+  font-size: 1.5rem;
+}
+
+.second_row {
+  margin-top:20px;
+}
+
+.btn-custom, .btn-addq {
+  width:100%;
+}
+
+.start_buttons {
+  margin-top:20px;
 }
