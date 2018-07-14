@@ -19,7 +19,7 @@ export default class SubmitButton extends React.Component {
     }
 
     render() {
-        const buttonText = this.state.submitted ? 'Next' : 'Check';
+        const buttonText = this.state.submitted ? 'Next' : 'Next';
         return (
             <button type="submit" className="submit_answer" onClick={this.submit}>
                 {buttonText}

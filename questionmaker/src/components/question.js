@@ -45,14 +45,15 @@ export default class Question extends React.Component {
     componentDidUpdate() {
       let elem = document.getElementById('animation');
       console.log("attempted update")
-      if (elem) {
+
+      if (this.isCorrect() == true) {
         console.log("found")
         lottie.loadAnimation({
           container: elem, // the dom element that will contain the animation
           renderer: 'svg',
           loop: false,
           autoplay: true,
-          path: 'js/correct.json' // the path to the animation json
+          path: "js/correct.json" // the path to the animation json
         });
       }
     }
@@ -61,14 +62,14 @@ export default class Question extends React.Component {
         if (this.state.submitted) {
             const correct = this.isCorrect() ? 'Correct' : 'Incorrect';
 
-            var answer = (<span class="question_answer answer_correct">{this.props.question.selectedResponseValue}</span>)
+            var answer = (<span class="question_answer answer_correct">{this.state.selectedResponseValue}</span>)
             if (correct == "Incorrect") {
-              answer = (<span class="question_answer answer_incorrect">{this.props.question.selectedResponseValue}</span>)
+              answer = (<span class="question_answer answer_incorrect">{this.state.selectedResponseValue}</span>)
             }
 
             return (
                 <div>
-                    <div class="question_text">{this.props.question.text} </div>
+                    <div class="question_text">{this.props.question.text} {answer}</div>
                     {/* TODO: media*/}
                     <p class="answerResult">{correct}!</p>
                     <div id="animation"></div>
