@@ -2,10 +2,44 @@ nav {
   background-color:#510b8e !important;
 }
 
+.container {
+  margin-top:60px;
+}
+
 .question_resonse button {
   border: 1px solid grey;
   border-radius: 4px;
   width: 100%;
   padding: 10px;
   margin:5px 0;
+}
+
+.question_response {
+  border:1px solid red;
+}
+
+.question_text {
+  min-height:100px;
+  padding:30px 0;
+}
+
+.rate_question {
+  text-align:right;
+  font-size:12px;
+  padding-top:20px;
+}
+
+.form_response_type input {
+  margin:0 0 0 10px;
+}
+
+.builder_component {
+  margin-top:10px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #510c8d !important;
+    border-color: #510c8d !important;
+    padding:6px 30px !important;
 }
