@@ -1,5 +1,5 @@
 nav {
-  background-color:#a53c96 !important;
+  background-color:#510b8e !important;
 }
 
 .container {
@@ -20,16 +20,12 @@ label {
   font-weight:bold;
 }
 
-.question_resonse button {
+.question_response button {
   border: 1px solid grey;
   border-radius: 4px;
   width: 100%;
   padding: 10px;
   margin:5px 0;
-}
-
-.question_response {
-  border:1px solid red;
 }
 
 .question_text {
@@ -53,8 +49,8 @@ label {
 
 .btn-primary {
     color: #fff;
-    background-color: #a53c96 !important;
-    border-color: #a53c96 !important;
+    background-color: #510c8d !important;
+    border-color: #510c8d !important;
     padding:6px 30px !important;
     float:right;
 }
@@ -87,3 +83,88 @@ select.subjects {
 .start_buttons {
   margin-top:20px;
 }
+
+
+
+.wrapper{
+  width: 160px;
+  margin: 0 auto;
+}
+
+.wrapper h1{
+  padding-top: 3px;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+.wrapper h2{
+  text-align: left;
+}
+
+.line{
+  min-width: 160px;
+  margin: 0 auto 10px;
+  font-size: 10px;
+  color: white;
+  padding: 0 0 0 5px;
+  position: relative;
+  background-color: #500c8d;
+}
+
+.line:before{
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  height: 25px;
+  top: 0;
+  z-index: -2;
+  background-color: #500c8d;
+}
+
+line.after{
+  content: '';
+  background-color: #9810f1;
+  height: 20px;
+  transition: 0.8s;
+  display: block;
+  width: 100%;
+  animation: animate 1 4s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.line1:after{
+  max-width: 80%;
+}
+
+.line2:after{
+  max-width: 60%;
+}
+
+.line3:after{
+  max-width: 40%;
+}
+
+.line4:after{
+  max-width: 90%;
+}
+
+.line5:after{
+  max-width: 50%;
+}
+
+@keyframes animate {
+  0%{
+    width: 0;
+  }
+  100%{
+    max-width: 100%;
+  }
+
+}
+
+

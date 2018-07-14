@@ -19,14 +19,14 @@ const middleware = webpackDevMiddleware(compiler, {
 });
 
 const distFile = `${pathConfig.dist}/index.html`;
-
+const cssFile = `${pathConfig.dist}/questions.css`;
 server.use(middleware);
 server.use(webpackHotMiddleware(compiler));
 
-server.get('*', (req, res) => {
-  res.write(middleware.fileSystem.readFileSync(distFile));
-  res.end();
-});
+// server.get('*.css', (req, res) => {
+//   res.write(middleware.fileSystem.readFileSync(cssFile));
+//   res.end();
+// });
 
 server.listen(PORT, 'localhost', err =>  {
   if (err) {
