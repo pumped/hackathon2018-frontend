@@ -24,11 +24,14 @@ export default class ResponseList extends React.Component {
     render() {
         let self = this;
         return (
-            <ul class="list-unstyled">
+            <div className="question_resonse">
                 {this.props.responses.map(function (responseOpts, index) {
-                    return <li key={index} value={responseOpts.value}><ResponseButton response={responseOpts} setSelectedResponseValue={self.setSelectedResponseValue.bind(self)}/></li>;
+                    return <p>
+                        <ResponseButton response={responseOpts}
+                                        setSelectedResponseValue={self.setSelectedResponseValue.bind(self)}/>
+                    </p>;
                 })}
-            </ul>
+            </div>
         );
     }
 }

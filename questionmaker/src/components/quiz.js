@@ -12,7 +12,8 @@ export default class QuizPage extends React.Component {
         // collect success/failures
         results: [],
         questionMarker: 0,
-        successCount: 0
+        successCount: 0,
+        skipped: 0
     };
 
     constructor(props) {
@@ -21,11 +22,13 @@ export default class QuizPage extends React.Component {
         this.triggerNext = this.triggerNext.bind(this);
     }
 
-    triggerNext(success) {
+    triggerNext(success, skip = false) {
         const currentMarker = this.state.questionMarker;
         let successCount = this.state.successCount;
+        let skipped = this.state.skipped;
         if (success) successCount += 1;
-        this.setState({questionMarker: currentMarker + 1, successCount});
+        if (skip) skipped += 1;
+        this.setState({questionMarker: currentMarker + 1, successCount, skipped});
     }
 
     render() {
@@ -33,16 +36,14 @@ export default class QuizPage extends React.Component {
         if (this.state.questionMarker === this.state.questionData.length) {
             return (
                 <div>
-                    <h1>Quiz!</h1>
                     {/**/}
-                    <p>All done! You got {this.state.successCount} out of {this.state.questionData.length} correct!</p>
+                    <p>All done! You got {this.state.successCount} out of {this.state.questionData.length - this.state.skipped} correct!</p>
                     {/* nav? */}
                 </div>
             );
         } else {
             return (
-                <div>
-                    <h1>Quiz!</h1>
+                <div className="container">
                     {/**/}
                     <Question question={questionData[this.state.questionMarker]} triggerNext={this.triggerNext}/>
                     {/* nav? */}

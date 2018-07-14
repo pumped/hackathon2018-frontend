@@ -8,7 +8,7 @@ export default class ResponseButton extends React.Component {
 
     render() {
         return (
-            <button value={this.props.response.value} type="submit" onClick={this.props.setSelectedResponseValue}>
+            <button className="button_response" value={this.props.response.value} type="submit" onClick={this.props.setSelectedResponseValue}>
                 {this.props.response.text}
             </button>
         );

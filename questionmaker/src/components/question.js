@@ -18,6 +18,7 @@ export default class Question extends React.Component {
         this.checkSubmission = this.checkSubmission.bind(this);
         this.triggerNext = this.triggerNext.bind(this);
         this.isCorrect = this.isCorrect.bind(this);
+        this.skipQuestion = this.skipQuestion.bind(this);
     }
 
     handleChange(event) {
@@ -37,6 +38,10 @@ export default class Question extends React.Component {
         this.setState({submitted: false});
     }
 
+    skipQuestion() {
+        this.props.triggerNext(false, true);
+    }
+
     render() {
         if (this.state.submitted) {
             const correct = this.isCorrect() ? 'correct!' : 'incorrect';
@@ -51,12 +56,19 @@ export default class Question extends React.Component {
             )
         } else {
             return (
-                <div>
-                    <hi>{this.props.question.text}</hi>
-                    {/* TODO: media*/}
-                    <ResponseList responses={this.props.question.responseOptions}
-                                  onChange={this.handleChange.bind(this)}/>
-                    <SubmitButton checkSubmission={this.checkSubmission.bind(this)}/>
+                <div className="question_component">
+                    <div className="question_body">
+                        <div className="question_text">
+                            <p>{this.props.question.text}</p>
+                        </div>
+                        {/* TODO: media*/}
+                        <ResponseList responses={this.props.question.responseOptions}
+                                      onChange={this.handleChange.bind(this)}/>
+                        <SubmitButton checkSubmission={this.checkSubmission.bind(this)}/>
+                    </div>
+                    <div className="rate_question" onClick={this.skipQuestion}>
+                        <a href="#">Don't show me this</a>
+                    </div>
                 </div>
             );
         }
