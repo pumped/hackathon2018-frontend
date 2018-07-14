@@ -24,7 +24,7 @@ export default class ResponseList extends React.Component {
     render() {
         let self = this;
         return (
-            <div className="question_resonse">
+            <div className="question_response">
                 {this.props.responses.map(function (responseOpts, index) {
                     return <p>
                         <ResponseButton response={responseOpts}
