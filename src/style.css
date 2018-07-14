@@ -1,0 +1,11 @@
+nav {
+  background-color:#510b8e !important;
+}
+
+.question_resonse button {
+  border: 1px solid grey;
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  margin:5px 0;
+}
