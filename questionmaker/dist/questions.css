@@ -64,7 +64,8 @@ element.style {
 }
 
 #animation {
-    height: 310px;
+    max-height: 310px;
+    min-height: 210px;
 }
 
 .question_text, .question_body .question_text {
@@ -128,7 +129,22 @@ select.subjects {
   margin-top:20px;
 }
 
+.answer_incorrect {
+  color: #f00;
+}
 
+.answer_correct {
+  color:#19b700;
+}
+
+.finish_message {
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+#animation_finish {
+  max-height:'none';
+}
 
 
 

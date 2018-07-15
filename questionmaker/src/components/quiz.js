@@ -31,13 +31,33 @@ export default class QuizPage extends React.Component {
         this.setState({questionMarker: currentMarker + 1, successCount, skipped});
     }
 
+    componentDidUpdate() {
+      let elem = document.getElementById('animation_finish');
+
+      if (!elem) {
+        return;
+      }
+
+      if (this.state.questionMarker === this.state.questionData.length) {
+        console.log("found")
+        lottie.loadAnimation({
+          container: elem, // the dom element that will contain the animation
+          renderer: 'svg',
+          loop: false,
+          autoplay: true,
+          path: "js/happy.json" // the path to the animation json
+        });
+      }
+    }
+
     render() {
         const {questionData} = this.state;
         if (this.state.questionMarker === this.state.questionData.length) {
             return (
                 <div>
                     {/**/}
-                    <p>All done! You got {this.state.successCount} out of {this.state.questionData.length - this.state.skipped} correct!</p>
+                    <div id="animation_finish" ></div>
+                    <p className="finish_message">You got {this.state.successCount} out of {this.state.questionData.length - this.state.skipped} correct!</p>
                     {/* nav? */}
                 </div>
             );
